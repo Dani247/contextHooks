@@ -8,7 +8,7 @@ import Counter from './components/Counter'
 import { initState as count } from './hooks/context/stores/Count'
 
 // * import context provider
-import Store from './hooks/context'
+import Store from './hooks/context/utils'
 
 // * compose states
 const initState = {

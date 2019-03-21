@@ -1,10 +1,12 @@
 import React from 'react'
 
 // * import count sub state
-import { useCount } from '../hooks/context/stores/Count'
+import { useCount, useIncrementCount, useDecrementCount } from '../hooks/context/states/Count'
 
 function Counter () {
-  const [ count, { increment, decrement } ] = useCount()
+  const count = useCount()
+  const increment = useIncrementCount()
+  const decrement = useDecrementCount()
 
   return (
     <div>
