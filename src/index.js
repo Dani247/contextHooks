@@ -1,12 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// * import components
+import Counter from './components/Counter'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// * import any initial state
+import { initState as count } from './hooks/context/stores/Count'
+
+// * import context provider
+import Store from './hooks/context'
+
+// * compose states
+const initState = {
+  count
+}
+
+ReactDOM.render(<Store.Provider initState={initState}>
+  <Counter />
+</Store.Provider>, document.getElementById('root'))
