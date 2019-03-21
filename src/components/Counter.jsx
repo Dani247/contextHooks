@@ -1,6 +1,6 @@
 import React from 'react'
 
-// * import count sub state
+// * import actions
 import { useCount, useIncrementCount, useDecrementCount } from '../hooks/context/states/Count'
 
 function Counter () {

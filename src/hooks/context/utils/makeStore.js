@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useMemo } from 'react'
 
 export default function makeStore () {
   // * create context
@@ -17,7 +17,7 @@ export default function makeStore () {
     }
 
     // * Store state into a memoized value
-    const store = [state, loggerSetState]
+    const store = useMemo(() => [state, loggerSetState], [state])
 
     // * Return context Provider with the store as value
     return <Context.Provider value={store}>{children}</Context.Provider>

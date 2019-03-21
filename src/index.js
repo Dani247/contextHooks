@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 import Counter from './components/Counter'
 
 // * import any initial state
-import { initState as count } from './hooks/context/stores/Count'
+import { initState as count } from './hooks/context/states/Count'
 
 // * import context provider
 import Store from './hooks/context/utils'
